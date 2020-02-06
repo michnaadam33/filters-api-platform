@@ -8,11 +8,13 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
+use App\Filter\TypeOfMovieFilter;
 
 /**
  * @ORM\Entity()
  * @ApiResource()
  * @ApiFilter(SearchFilter::class, properties={"firstName": "ipartial", "lastName": "ipartial"})
+ * @ApiFilter(TypeOfMovieFilter::class)
  */
 class User
 {
